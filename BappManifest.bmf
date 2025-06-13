@@ -1,0 +1,13 @@
+Uuid: 3cdcf2a486a44690a6c96087603b5406
+ExtensionType: 2
+Name: AWS cURL Command
+RepoName: aws-curl-command
+ScreenVersion: 1.0.0
+SerialVersion: 1
+MinPlatformVersion: 0
+ProOnly: False
+Author: Dotwut
+ShortDescription: This extension allows users to generate AWS Curl commands or cURL with SigV4 from an API using a right-click functionality, copying the command to the clipboard.
+EntryPoint: ./awscurl_curlsigv4.py
+BuildCommand: 
+SupportedProducts: Pro, Community
