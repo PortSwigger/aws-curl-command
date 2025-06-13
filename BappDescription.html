@@ -1,16 +1,29 @@
-<p>This Burp Extension lets you generate AWS Curl commands or cURL with SigV4 from an API. With a simple right-click, you can bring up the extension context menu, select the extension and instantly the generated command will be copied to your clipboard.</p>
+<p>This extension allows users to generate AWS-signed <code class="InlineCode">curl</code> commands from HTTP requests. It simplifies the process of testing and reproducing AWS API requests on the command line with valid AWS Signature Version 4 headers.</p>
 
 <h2>Features</h2>
-<p>The extension provides two primary features:</p>
+
 <ul>
-<li>Generate AWS Curl commands for a given API.</li>
-<li>Generate cURL commands with SigV4 for a given API.</li>
+  <li>Generates fully signed AWS <code class="InlineCode">curl</code> commands from selected HTTP requests</li>
+  <li>Supports AWS Signature Version 4</li>
+  <li>Automatically includes required headers such as <code class="InlineCode">Authorization</code> and <code class="InlineCode">x-amz-date</code></li>
+  <li>Copies the signed command to the clipboard for easy use</li>
 </ul>
 
 <h2>Usage</h2>
-<p>The use of the extension is pretty straightforward. Right-click to bring up the extension context menu and choose the extension. Your AWS Curl or cURL with SigV4 command is then created and automatically copied to your clipboard. The general structure of these commands can be seen below:</p>
 
-<pre><code class=Code>
+<ol>
+  <li>Ensure you have valid AWS credentials configured in your environment (e.g., via environment variables or AWS CLI config).</li>
+  <li>In Burp Suite, right-click on an HTTP request and choose "Generate AWS cURL Command" from the context menu.</li>
+  <li>The extension will sign the request using your credentials and copy a ready-to-use <code class="InlineCode">curl</code> command to your clipboard.</li>
+  <li>Paste and run the command in your terminal to send the signed request using <code class="InlineCode">curl</code>.</li>
+</ol>
+
+<h2>Examples</h2>h2></h2>
+
+<p>The general structure of these commands can be seen below.</p>
+
+<h3>AWS cURL</h3>
+<pre class=""pre-wrap"><code class=Code>
 awscurl --service &lt;service&gt; --region us-east-1 \\
     -X GET \\
     -H Host: &lt;host&gt; \\
@@ -22,7 +35,8 @@ awscurl --service &lt;service&gt; --region us-east-1 \\
     &lt;Endpoint-URL&gt;
 </code></pre>
 
-<pre><code class=Code>
+<h3>cURL with SigV4</h3>
+<pre class=""pre-wrap"><code class=Code>
 curl https://endpoint \\
     --user $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY \\
     -H x-amz-security-token: $AWS_SESSION_TOKEN \\

@@ -7,7 +7,7 @@ SerialVersion: 1
 MinPlatformVersion: 0
 ProOnly: False
 Author: Dotwut
-ShortDescription: This extension allows users to generate AWS Curl commands or cURL with SigV4 from an API using a right-click functionality, copying the command to the clipboard.
+ShortDescription: Generate AWS Curl commands or cURL with SigV4 straight to your clipboard.
 EntryPoint: ./awscurl_curlsigv4.py
 BuildCommand: 
 SupportedProducts: Pro, Community
