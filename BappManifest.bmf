@@ -8,6 +8,6 @@ MinPlatformVersion: 0
 ProOnly: False
 Author: Dotwut
 ShortDescription: Generate AWS Curl commands or cURL with SigV4 straight to your clipboard.
-EntryPoint: ./awscurl_curlsigv4.py
+EntryPoint: awscurl_curlsigv4.py
 BuildCommand: 
 SupportedProducts: Pro, Community

@@ -18,12 +18,12 @@
   <li>Paste and run the command in your terminal to send the signed request using <code class="InlineCode">curl</code>.</li>
 </ol>
 
-<h2>Examples</h2>h2></h2>
+<h2>Examples</h2>
 
 <p>The general structure of these commands can be seen below.</p>
 
 <h3>AWS cURL</h3>
-<pre class=""pre-wrap"><code class=Code>
+<pre class="pre-wrap"><code class=Code>
 awscurl --service &lt;service&gt; --region us-east-1 \\
     -X GET \\
     -H Host: &lt;host&gt; \\
@@ -36,7 +36,7 @@ awscurl --service &lt;service&gt; --region us-east-1 \\
 </code></pre>
 
 <h3>cURL with SigV4</h3>
-<pre class=""pre-wrap"><code class=Code>
+<pre class="pre-wrap"><code class=Code>
 curl https://endpoint \\
     --user $AWS_ACCESS_KEY_ID:$AWS_SECRET_ACCESS_KEY \\
     -H x-amz-security-token: $AWS_SESSION_TOKEN \\
